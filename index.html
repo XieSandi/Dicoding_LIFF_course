@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html>
- 
+
 <head>
     <title>Catatan Harianku</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
@@ -9,28 +9,30 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css">
- 
+
     <style>
         .table>thead>tr>th {
             padding: 60px;
         }
     </style>
- 
- 
+
+
 </head>
- 
+
 <body onload="loadCatatan();">
- 
+
     <div class="col-xs-12 col-md-8 col-md-offset-2" ng-controller="listContactCtrl">
         <div class="page-header">
             <h1 align="center">
                 Catatan Harianku
             </h1>
             <ul class="nav nav-pills">
-                <li><a id="nav-list-catatan" href="javascript:void(0);" onclick="gantiMenu('list-catatan');">List Catatan</a></li>
-                <li><a id="nav-tambah-catatan" href="javascript:void(0);" onclick="gantiMenu('tambah-catatan');">Tambah Catatan</a></li>
+                <li><a id="nav-list-catatan" href="javascript:void(0);" onclick="gantiMenu('list-catatan');">List
+                        Catatan</a></li>
+                <li><a id="nav-tambah-catatan" href="javascript:void(0);" onclick="gantiMenu('tambah-catatan');">Tambah
+                        Catatan</a></li>
             </ul>
- 
+
         </div>
         <div id="tambah-catatan" class="well" style="display:none;">
             <form id="form-data">
@@ -50,15 +52,15 @@
                 <input type="reset" value="Reset" onclick="" class="btn btn-warning btn-small" />
             </form>
         </div>
- 
+
         <div id="edit-data" class="well" style="display:none;">
             <form id="eform-data">
- 
+
                 <div id="nama-group" class="form-group" style="display:none;">
                     <label>id data:</label>
                     <input type="text" class="form-control" id="eid_data" name="nama">
                 </div>
- 
+
                 <div id="nama-group" class="form-group">
                     <label>Nama:</label>
                     <input type="text" class="form-control" id="enama" name="nama">
@@ -77,15 +79,15 @@
                     class="btn btn-warning btn-small" />
             </form>
         </div>
- 
+
         <div id="lihat-data" class="well" style="display:none;">
             <form id="eform-data">
- 
+
                 <div id="nama-group" class="form-group" style="display:none;">
                     <label for="disabled">id data:</label>
                     <input type="text" class="form-control" id="lid_data" name="nama" disabled>
                 </div>
- 
+
                 <div id="nama-group" class="form-group">
                     <label for="disabled">Nama:</label>
                     <input type="text" class="form-control" id="lnama" name="nama" disabled>
@@ -102,14 +104,14 @@
                     class="btn btn-warning btn-small" />
             </form>
         </div>
- 
- 
+
+
         <div id="list-catatan" class="well">
             Pilih List Catatan untuk melihat catatan yang sudah dibuat.
         </div>
- 
+
         <!--Konten LIFF v2-->
- 
+
         <div id="liffAppContent">
             <!-- ACTION BUTTONS -->
             <div class="buttonGroup">
@@ -118,9 +120,9 @@
                     <button id="closeWindowButton" class="btn btn-danger btn-small">Close LIFF App</button>
                     <button id="sendMessageButton" class="btn btn-warning btn-small">Send Message</button>
                 </div>
- 
+
             </div>
- 
+
             <!-- LIFF DATA -->
             <div id="liffData">
                 <h3 id="liffDataHeader" class="textLeft">Informasi:</h3>
@@ -150,6 +152,7 @@
                 </div>
             </div>
         </div>
+
         <!-- LIFF ID ERROR -->
         <div id="liffIdErrorMessage" class="hidden">
             <p>You have not assigned any value for LIFF ID.</p>
@@ -169,19 +172,23 @@
                     href="https://developers.line.biz/en/reference/liff/#initialize-liff-app">Initializing the LIFF
                     app</a>.</p>
         </div>
+
         <!-- LIFF INIT ERROR -->
         <div id="liffInitErrorMessage" class="hidden">
             <p>Something went wrong with LIFF initialization.</p>
-            <p>LIFF initialization can fail if a user clicks "Cancel" on the "Grant permission" screen, or if an error occurs in the process of <code>liff.init()</code>.
+            <p>LIFF initialization can fail if a user clicks "Cancel" on the "Grant permission" screen, or if an error
+                occurs in the process of <code>liff.init()</code>.
         </div>
+
         <!-- NODE.JS LIFF ID ERROR -->
         <div id="nodeLiffIdErrorMessage" class="hidden">
             <p>Unable to receive the LIFF ID as an environment variable.</p>
         </div>
-        
+
     </div>
 </body>
+<script src="liff-starter.js"></script>
 <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 <script src="catatan-config.js"></script>
- 
+
 </html>
